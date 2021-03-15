@@ -9,6 +9,7 @@
 import UIKit
 import UserNotifications
 import StripeTerminal
+import Sentry
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -39,6 +40,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Terminal.setTokenProvider(apiClient)
         Terminal.shared.delegate = TerminalDelegateAnnouncer.shared
         AppDelegate.apiClient = apiClient
+        
+        
+        SentrySDK.start { options in
+                options.debug = true // Enabled debug when first installing is always helpful
+            }
 
         // To log events from the SDK to the console:
         // Terminal.shared.logLevel = .verbose
