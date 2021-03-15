@@ -43,7 +43,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         SentrySDK.start { options in
-            options.dsn = "https://7d06eaa170074ddda0dfc9004194b9e3@o552246.ingest.sentry.io/5677574"
+            options.dsn = "https://b1379d3ae5d14e89baf8650a03b556ca@o552246.ingest.sentry.io/5678099"
             options.debug = false // Enabled debug when first installing is always helpful
         }
 
