@@ -43,8 +43,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         SentrySDK.start { options in
-                options.debug = false // Enabled debug when first installing is always helpful
-            }
+            options.dsn = "https://7d06eaa170074ddda0dfc9004194b9e3@o552246.ingest.sentry.io/5677574"
+            options.debug = false // Enabled debug when first installing is always helpful
+        }
 
         // To log events from the SDK to the console:
         // Terminal.shared.logLevel = .verbose
