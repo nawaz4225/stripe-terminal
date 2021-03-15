@@ -43,7 +43,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         SentrySDK.start { options in
-                options.debug = true // Enabled debug when first installing is always helpful
+                options.debug = false // Enabled debug when first installing is always helpful
             }
 
         // To log events from the SDK to the console:
