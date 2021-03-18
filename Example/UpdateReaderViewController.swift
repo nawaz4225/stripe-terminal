@@ -162,6 +162,7 @@ class UpdateReaderViewController: TableViewController, TerminalDelegate, Bluetoo
     func reader(_ reader: Reader, didReportAvailableUpdate update: ReaderSoftwareUpdate) {
         self.update = update
         self.checkForUpdateCancelable = nil
+        updateContent()
     }
     
     func reader(_ reader: Reader, didStartInstallingUpdate update: ReaderSoftwareUpdate, cancelable: Cancelable) {
