@@ -17,7 +17,7 @@ class StartSetReaderDisplayViewController: TableViewController {
     private let currencyView = CurrencyInputView()
     private var setReaderDisplaySection: Section?
 
-    private var lineItems = [SCPCartLineItem]()
+    private var lineItems = [CartLineItem]()
 
     lazy var taxSection = Section(header: Section.Extremity.title("Tax: \(self.taxView.amountString)"), rows: [],
                              footer: Section.Extremity.autoLayoutView(taxView))
@@ -71,7 +71,7 @@ class StartSetReaderDisplayViewController: TableViewController {
     }
 
     internal func startSetReaderDisplay() {
-        let cart = SCPCart(currency: currencyView.currency, tax: Int(taxView.amount), total: Int(totalView.amount))
+        let cart = Cart(currency: currencyView.currency, tax: Int(taxView.amount), total: Int(totalView.amount))
         guard let lineItems = (lineItems as NSArray).mutableCopy() as? NSMutableArray else {
             return
         }
@@ -120,7 +120,7 @@ class StartSetReaderDisplayViewController: TableViewController {
                 return
             }
 
-            let lineItem = SCPCartLineItem(displayName: displayName, quantity: quantity, amount: amount)
+            let lineItem = CartLineItem(displayName: displayName, quantity: quantity, amount: amount)
             self.lineItems.append(lineItem)
             self.updateContent()
         })

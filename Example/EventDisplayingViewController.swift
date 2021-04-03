@@ -152,7 +152,7 @@ class EventDisplayingViewController: TableViewController, TerminalDelegate, Blue
         
     }
     
-    func reader(_ reader: Reader, didStartInstallingUpdate update: ReaderSoftwareUpdate, cancelable: Cancelable) {
+    func reader(_ reader: Reader, didStartInstallingUpdate update: ReaderSoftwareUpdate, cancelable: Cancelable?) {
         
     }
     

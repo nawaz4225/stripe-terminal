@@ -280,7 +280,7 @@ class ReaderDiscoveryViewController: TableViewController, DiscoveryDelegate, Can
         
     }
     
-    func reader(_ reader: Reader, didStartInstallingUpdate update: ReaderSoftwareUpdate, cancelable: Cancelable) {
+    func reader(_ reader: Reader, didStartInstallingUpdate update: ReaderSoftwareUpdate, cancelable: Cancelable?) {
         
     }
     

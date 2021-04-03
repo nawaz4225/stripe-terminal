@@ -209,7 +209,7 @@ class ReaderRegistrationViewController: TableViewController, DiscoveryDelegate, 
         
     }
     
-    func reader(_ reader: Reader, didStartInstallingUpdate update: ReaderSoftwareUpdate, cancelable: Cancelable) {
+    func reader(_ reader: Reader, didStartInstallingUpdate update: ReaderSoftwareUpdate, cancelable: Cancelable?) {
         
     }
     

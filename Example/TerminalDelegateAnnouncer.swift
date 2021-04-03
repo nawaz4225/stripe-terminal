@@ -95,27 +95,39 @@ class TerminalDelegateAnnouncer: NSObject, TerminalDelegate, BluetoothReaderDele
     }
     //BluetoothReaderDelegate
     func reader(_ reader: Reader, didReportAvailableUpdate update: ReaderSoftwareUpdate) {
-        
+        announce2 { delegate in
+            delegate.reader(reader, didReportAvailableUpdate: update)
+        }
     }
     
-    func reader(_ reader: Reader, didStartInstallingUpdate update: ReaderSoftwareUpdate, cancelable: Cancelable) {
-        
+    func reader(_ reader: Reader, didStartInstallingUpdate update: ReaderSoftwareUpdate, cancelable: Cancelable?) {
+        announce2 { delegate in
+            delegate.reader(reader, didStartInstallingUpdate: update, cancelable: cancelable)
+        }
     }
     
     func reader(_ reader: Reader, didReportReaderSoftwareUpdateProgress progress: Float) {
-        
+        announce2 { delegate in
+            delegate.reader(reader, didReportReaderSoftwareUpdateProgress: progress)
+        }
     }
     
     func reader(_ reader: Reader, didFinishInstallingUpdate update: ReaderSoftwareUpdate?, error: Error?) {
-        
+        announce2 { delegate in
+            delegate.reader(reader, didFinishInstallingUpdate: update, error: error)
+        }
     }
     
     func reader(_ reader: Reader, didRequestReaderInput inputOptions: ReaderInputOptions = []) {
-        
+        announce2 { delegate in
+            delegate.reader(reader, didRequestReaderInput: inputOptions)
+        }
     }
     
     func reader(_ reader: Reader, didRequestReaderDisplayMessage displayMessage: ReaderDisplayMessage) {
-        
+        announce2 { delegate in
+            delegate.reader(reader, didRequestReaderDisplayMessage: displayMessage)
+        }
     }
     
     func reader(_ reader: Reader, didReportReaderEvent event: ReaderEvent, info: [AnyHashable : Any]?) {

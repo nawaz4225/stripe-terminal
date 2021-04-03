@@ -118,7 +118,9 @@ class ReaderViewController: TableViewController, TerminalDelegate, CancelingView
     }
 
     internal func showReadReusableCard() {
-        if let connectReader = self.connectedReader, connectReader.deviceType != .chipper2X, connectReader.deviceType != .verifoneP400 {
+        if let connectReader = self.connectedReader,
+           connectReader.deviceType != .chipper2X,
+           connectReader.deviceType != .verifoneP400 {
             self.presentAlert(title: "Error", message: "This device type does not support readReusableCard.")
             return
         }
@@ -287,7 +289,7 @@ class ReaderViewController: TableViewController, TerminalDelegate, CancelingView
         
     }
     
-    func reader(_ reader: Reader, didStartInstallingUpdate update: ReaderSoftwareUpdate, cancelable: Cancelable) {
+    func reader(_ reader: Reader, didStartInstallingUpdate update: ReaderSoftwareUpdate, cancelable: Cancelable?) {
         
     }
     

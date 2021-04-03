@@ -170,7 +170,7 @@ class ReadReusableCardViewController: TableViewController, TerminalDelegate, Blu
         
     }
     
-    func reader(_ reader: Reader, didStartInstallingUpdate update: ReaderSoftwareUpdate, cancelable: Cancelable) {
+    func reader(_ reader: Reader, didStartInstallingUpdate update: ReaderSoftwareUpdate, cancelable: Cancelable?) {
         
     }
     

@@ -111,8 +111,6 @@ class ReaderHeaderView: UIView {
                 label.text = "Connected, simulated"
             case .connected:
                 label.text = "Connected"
-            case .updating:
-                label.text = "Updating"
             @unknown default:
                 label.text = "\(status)"
             }
